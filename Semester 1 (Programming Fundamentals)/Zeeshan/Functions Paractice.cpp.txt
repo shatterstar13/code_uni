@@ -1,0 +1,264 @@
+
+//#include<iostream>
+//using namespace std;
+//int add(int x, int y) {
+//	int z;
+//	z = x + y;
+//	return z;      //funtion for Adding two Number;
+//}
+//int sub(int e, int f){
+//	int g;
+//	g = e - f;   //function for substracting two number;
+//	return g;
+//}
+//int mul(int i, int j) {
+//	int k;
+//	k = i * j;   //functionn for Multiplication of two Number;
+//	return k;
+//}
+//int main() {
+//	int a, b, c, d;
+//	a = 15, b = 10;
+//	c = add(a, b);
+//	d = sub(a, b);
+//	int h = mul(a, b);
+//	cout << "sum is = " << c;
+//	cout << endl;
+//	cout << "Difference is = " << d;
+//	cout << endl;
+//	cout << "Multiplication is = " << h;
+//	return 0;
+//}
+                 /*..........................function for finding max number */
+
+
+//#include<iostream>
+//using namespace std;
+//int max(int x, int y, int z) {
+//    if (x > y && x > z)
+//        return x;
+//    else if (y > x && y > z)
+//        return y;
+//    else                       //finding maximum number using fuction
+//        return z;
+//    }
+//int main() {
+//    int x = 10, y = 15, z = 78;
+//    int r;
+//    r = max(x, y, z);
+//    cout << "Maximum Number is = " << r;
+//    return 0;
+//  }
+
+  /*..............function programing paractice ..........................*/
+
+//int add(int x, int y) {
+//    return x + y;
+//}
+//float add(float x, float y) {   //a function with same name but different argument lists is called function overloading
+//    return x + y;
+//}
+//int add(int x, int y, int z) {
+//    return x + y + z;
+//}
+//int main() {
+//    cout << add(10, 5) << endl;
+//    cout << add(10.4f, 12.4f) << endl;
+//    cout << add(12, 14, 16);
+//}
+
+/*.................................................................................*/
+//int max(int x, int y) {
+//    return x > y ? x : y;
+//}
+//float max(float x, float y) {           //maximum number between tw0 number using funtion overloading
+//    returetrn x > y ? x : y;
+//}
+//int main() {
+//    cout << max(12, 6) << endl;
+//    cout << max(32, 3) << endl;
+//    cout << max(12.3f, 45.2f) << endl;
+//}
+/*...........................................................................................*/
+//#include<iostream>
+//using namespace std;
+//template<class t>
+// t maxim(t x,t y) {
+//     return x > y ? x : y;
+// }
+// int main() {
+//     cout << maxim(2,5) << endl;
+//     cout << maxim(2.3f,2.6f) << endl;
+//     return 0;
+// }
+/*..............................................................................................*/
+/*...............................default arguments in functions...............................*/
+//#include<iostream>
+//using namespace std;
+//int maxim(int a=0, int b=0, int c = 0) {
+//    return a > b && a > c ? a : (b > c) ? b : c;
+//}
+//int main() {
+//    cout << maxius(12, 13, 15) << endl;
+//    cout << maxim(13) << endl;
+//    cout << maxim() << endl;
+//}
+
+/*.................................................................................................*/
+                     /*                     Call by value in function                             */
+//#include<iostream>
+//using namespace std;
+//void swap(int a, int b) {
+//    int t;
+//    t = a;          //they are formal parameter
+//    a = b;
+//    b = t;
+//    cout << a << " " << b << endl;
+//}
+//int main() {
+//    int x = 10, y = 20;
+//    swap(x, y);  //they are actual paramerter
+//    cout << x << " " << y;  //result does Not change because in call by value only vlaue of actual parameter
+//                           //goes to formal parameter and value changed in formal paramater;
+//}
+/*................................call by adress which is acess by pointers(* with variable)*/
+
+//#include<iostream>
+//using namespace std;
+//void swap(int *a, int *b) {
+//    int t;
+//    t = *a;          //they are formal parameter
+//    *a = *b;
+//    *b = t;
+//    cout << a << " " << b << endl; // Now it display the adress of a and b which is same as x and y in actual paramter
+//}
+//int main() {
+//    int x = 10, y = 20;
+//    swap(&x, &y);  //they are actual paramerter
+//    cout << &x << " " << &y << endl; // here the proof of line 132 comments statements;
+//    cout << x << " " << y;  //it will swap the two Numbers because adress of actual parameter will goes to formal parameter 
+//                           // operation performed on formal paramater using pointer and swap number in actual paramter 
+//}
+/*...........................call by reference in fucntionns by adding append(&) symbol in formal parameter*/
+
+
+//#include<iostream>
+//using namespace std;
+//void swap(int &a, int &b) {
+//    int t;
+//    t = a;          //they are formal parameter
+//    a = b;
+//    b = t;
+//    cout << a << " " << b << endl;
+//}
+//int main() {
+//    int x = 10, y = 20;
+//    swap(x, y);  //they are actual paramerter
+//    cout << x << " " << y;  //it will swap the two Numbers because it is inline function which will swap number in both parameters
+//}                           // all the calculation performed in main function.
+/*.............................................................................................................................*/
+                   /*....................local and global variables..................*/
+
+//#include<iostream>
+//using namespace std;
+//int g = 5;     //outside the function a global variable is created which is used in all the function main and defined function both
+//void fun() {
+//    int a = 5;  //inside any function a local variable is created which is only used inside the function and then displayed
+//    g = g + a;
+//    cout << g << endl;
+//}
+//int main() {
+//    cout << g << endl;  // it will display first global variable and display its value;
+//    fun();
+//    cout << g; //when function is called it is then change by g++ in outside the main function
+//}
+
+/*...........................................................................................................................*/
+
+  /*...........................block level scope executed first..............*/
+//int x = 5;
+//int main() {
+//    int x = 10;
+//    {
+//        int x = 16;
+//        cout << x << endl;
+//    }
+//    cout << x << endl;
+//    cout << ::x << endl; //outside the function executed by placing :: with that variable
+// }
+/*............................................................................................................................*/
+          /*............................static variable ...........................................*/
+//#include<iostream>
+//using namespace std;
+//    void fun() {
+//        static int v = 0; //this is static variable which acts as global variable and used only one time inside the function
+//        v++;
+//        cout << v << endl;
+//    }
+//    int main(){
+//        fun();
+//        fun();
+//        fun();
+//}
+/*........................................................................................................................*/
+/*..................................recursive function ...........................................................*/
+//# include<iostream>
+//using namespace std;
+//
+///*program for recursive function
+//
+//*/
+//void fun(int n)   
+//{
+//	if (n > 0)
+//	{
+//		cout << n << endl;
+//		fun(n - 1);  // a recursive function is one which is used to itself and a condition is must for recursive fucftion
+//	}
+//}
+//int main()
+//{
+//	int x = 5;
+//	fun(x);
+//}
+/*..................................................................................................*/
+//# include<iostream>
+//using namespace std;
+
+/*program for recursive function in reverse order 
+
+*/
+//void fun(int n)
+//{
+//	if (n > 0)
+//	{
+//		fun(n - 1);
+//		cout << n << endl;    //first it will check conditions untill it becomes fail and then print result in reverse order
+//		                     // a recursive function is one which is used to itself and a condition is must for recursive fucftion
+//	}
+//}
+//int main()
+//{
+//	int x = 5;
+//	fun(x);
+//}
+///*..........................................................................................................*/
+//#include<iostream>
+//using namespace std;
+//int Search(int A[], int n, int key)
+//{
+//    for (int i = 0; i < n; i++)  //A program of linear seacrch using function
+//        if (key == A[i])
+//            return i;
+//    return 0;
+//}
+//int main()
+//{
+//    int A[] = { 2,4,5,7,10,9,13 };
+//    int k;
+//    cout << "Enter an Element to be Searched:";
+//    cin >> k;
+//    int index = Search(A, 7, k);
+//    cout << "Element found at index :" << index << endl;
+//}
+/*.............................................................................*/

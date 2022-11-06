@@ -1,0 +1,3 @@
+Values for array hardcode:
+incorrect: 'A', 'D', 'B', 'B', 'C', 'B', 'A', 'B', 'C', 'D', 'A', 'C', 'D', 'B', 'A', 'D', 'D', 'B', 'A', 'C',
+correct: 'A', 'D', 'B', 'B', 'C', 'B', 'A', 'B', 'C', 'D', 'A', 'C', 'D', 'B', 'D', 'C', 'D', 'B', 'A', 'C',

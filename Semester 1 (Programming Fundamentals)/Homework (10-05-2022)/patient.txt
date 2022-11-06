@@ -1,0 +1,4 @@
+Medication Charges: 5100
+Service Charges: 60
+
+Total Charges: 5160
