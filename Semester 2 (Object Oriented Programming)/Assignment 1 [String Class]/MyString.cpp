@@ -262,6 +262,11 @@ MyString& MyString::operator++()		//overloading pre-increment operator
 
 MyString MyString::subString(int start, int end) const		//returns substring of the string from index 'start' to 'end'
 {
+	if ((start < 0 || start > length) || (end < 0 || end > length))
+	{
+		exit(-1);
+	}
+
 	MyString temp;
 
 	temp.length = end - start;
